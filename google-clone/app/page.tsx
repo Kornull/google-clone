@@ -8,10 +8,12 @@ export default function Home() {
       <Header />
       <div className="flex flex-col items-center mt-24">
         <Image
-          src="https://upload.wikimedia.org/wikipedia/commons/5/51/Google.png"
-          width="272"
-          height="100"
+          className=" w-72 h-24"
+          src="/google-clone.png"
+          width={288}
+          height={96}
           alt="google-clone"
+          priority
         />
         <HomeSearch />
       </div>
