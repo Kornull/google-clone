@@ -6,9 +6,12 @@ import { useRouter } from 'next/navigation';
 import { BiSearchAlt2 } from 'react-icons/bi';
 import { BsFillMicFill } from 'react-icons/bs';
 
+import Loading from './UI/Loading';
+
 const HomeSearch = () => {
   const router = useRouter();
   const [inputValue, setInputValue] = useState<string>('');
+  const [searchLoading, setSearchLoading] = useState<boolean>(false);
 
   const handleSubmit = (
     ev: React.FormEvent<HTMLFormElement> | React.MouseEvent<HTMLElement>
@@ -19,13 +22,17 @@ const HomeSearch = () => {
   };
 
   const randomWordSearch = async (): Promise<void> => {
-    try {
-      const response: Response = await fetch('https://random-word-api.herokuapp.com/word');
-      const result: string[] = await response.json();
-      router.push(`/search/web?searchInfo=${result[0]}`);
-    } catch (error) {
-      return;
-    }
+    setSearchLoading(true);
+    const response: string = await fetch('https://random-word-api.herokuapp.com/word')
+      .then((res: Response) => res.json())
+      .then((data: string[]) => data[0]);
+
+    if (!response.trim()) return;
+
+    router.push(`/search/web?searchInfo=${response}`);
+    setTimeout(() => {
+      setSearchLoading(false);
+    }, 1000);
   };
 
   return (
@@ -47,8 +54,12 @@ const HomeSearch = () => {
         <button className="btn" onClick={handleSubmit}>
           Google Search
         </button>
-        <button className="btn" onClick={randomWordSearch}>
-          I am Feeling Lucky
+        <button
+          className="btn flex justify-center items-center disabled:opacity-80"
+          onClick={randomWordSearch}
+          disabled={searchLoading}
+        >
+          {searchLoading ? <Loading /> : 'I am Feeling Lucky'}
         </button>
       </div>
     </>

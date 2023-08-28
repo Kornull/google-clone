@@ -1,4 +1,4 @@
-import Header from '@/components/Header';
+import Header from '@/components/UI/Header';
 import HomeSearch from '@/components/HomeSearch';
 import Image from 'next/image';
 
