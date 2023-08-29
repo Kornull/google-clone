@@ -6,7 +6,7 @@ const Footer = () => {
       <div className=" border-b px-8 py-3">
         <GetCountry />
       </div>
-      <div className="flex flex-col sm:flex-row justify-between items-center px-6 py-4 space-y-7 sm:space-y-0">
+      <div className="flex flex-col sm:flex-row justify-between items-center py-4 px-8 space-y-8 sm:space-y-0">
         <ul className="list">
           <li className="link">About</li>
           <li className="link">Advertising</li>
