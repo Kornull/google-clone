@@ -1,6 +1,8 @@
+import Image from 'next/image';
+
 import Header from '@/components/UI/Header';
 import HomeSearch from '@/components/HomeSearch';
-import Image from 'next/image';
+import Footer from '@/components/UI/Footer';
 
 export default function Home() {
   return (
@@ -17,6 +19,7 @@ export default function Home() {
         />
         <HomeSearch />
       </div>
+      <Footer />
     </>
   );
 }
