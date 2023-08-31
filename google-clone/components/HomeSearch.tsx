@@ -29,7 +29,7 @@ const HomeSearch = () => {
 
     if (!response.trim()) return;
 
-    router.push(`/search/web?searchInfo=${response}`);
+    router.push(`/search/web/${response}`);
     setTimeout(() => {
       setSearchLoading(false);
     }, 1000);
