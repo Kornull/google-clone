@@ -18,7 +18,7 @@ const HomeSearch = () => {
   ): void => {
     ev.preventDefault();
     if (!inputValue.trim()) return;
-    router.push(`/search/web?searchInfo=${inputValue}`);
+    router.push(`/search/web/${inputValue}`);
   };
 
   const randomWordSearch = async (): Promise<void> => {
