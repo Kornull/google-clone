@@ -16,6 +16,7 @@ const SearchHeader = () => {
           height={300}
           className=" w-32 mb-2 mt-3 md:m-0"
           alt="Google Clone"
+          priority
         />
       </Link>
       <div className=" flex items-center w-full justify-between">
