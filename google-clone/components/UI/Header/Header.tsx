@@ -1,6 +1,5 @@
 import Link from 'next/link';
 
-import { TbGridDots } from 'react-icons/tb';
 import HeaderButtons from '../Buttons/HeaderButtons';
 
 const Header = () => {
