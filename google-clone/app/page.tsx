@@ -7,9 +7,9 @@ export default function Home() {
   return (
     <>
       <Header />
-      <div className="flex flex-col items-center mt-24">
+      <div className="flex flex-col items-center mt-3 sm:mt-24">
         <Image
-          className=" w-72 h-24"
+          className=" w-48 sm:w-72 sm:h-24"
           src="/google-clone.png"
           width={300}
           height={300}
