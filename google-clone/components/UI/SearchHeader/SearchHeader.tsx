@@ -9,8 +9,8 @@ import SearchHeaderOptions from './SearchHeaderOptions/SearchHeaderOptions';
 
 const SearchHeader = () => {
   return (
-    <>
-      <header className="flex flex-col md:flex-row items-center p-1 sm:p-4">
+    <header className=" fixed bg-white w-full shadow-sm">
+      <div className="flex flex-col md:flex-row items-center p-1 sm:p-4">
         <Link href="/">
           <Image
             src="/google-clone.png"
@@ -28,9 +28,9 @@ const SearchHeader = () => {
             <HeaderButtons />
           </div>
         </div>
-      </header>
+      </div>
       <SearchHeaderOptions />
-    </>
+    </header>
   );
 };
 
