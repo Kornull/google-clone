@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation';
 import { BiSearchAlt2 } from 'react-icons/bi';
 import { BsFillMicFill } from 'react-icons/bs';
 
-import Loading from './UI/Loading';
+import Loading from '../UI/Loading';
 
 const HomeSearch = () => {
   const router = useRouter();
