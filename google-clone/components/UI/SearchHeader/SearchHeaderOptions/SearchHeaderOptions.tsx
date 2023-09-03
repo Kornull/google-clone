@@ -36,7 +36,7 @@ const SearchHeaderOptions = () => {
           data={SearchSettings.WEB}
         />
         <SearchHeaderButton
-          style={`page__search-btn ${search === SearchSettings.WEB ? '' : 'active'}`}
+          style={`page__search-btn ${search === SearchSettings.IMAGE ? 'active' : ''}`}
           onClick={selectTab}
           name={SearchSettingsName.IMAGE}
           data={SearchSettings.IMAGE}
