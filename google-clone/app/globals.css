@@ -18,4 +18,12 @@
   .setting__icon {
     @apply bg-transparent hover:bg-gray-200 rounded-full text-4xl p-2 cursor-pointer transition-colors;
   }
+
+  .page__search-btn {
+    @apply min-w-max text-gray-600 px-4 py-1 font-medium hover:brightness-105 hover:bg-gray-200 transition-shadow border border-gray-300 rounded-2xl;
+  }
+
+  .page__search-btn.active {
+    @apply min-w-max bg-blue-100 text-blue-600 px-4 py-1 font-medium hover:brightness-105 hover:bg-blue-200 transition-shadow rounded-2xl border-none;
+  }
 }
