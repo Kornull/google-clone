@@ -27,7 +27,7 @@ const SearchHeaderOptions = () => {
   };
 
   return (
-    <div className=" flex items-start px-6 py-3 border-b-2 border-gray-200">
+    <div className=" flex items-center px-1 sm:px-6  md:px-44 py-3 border-b-2 border-gray-200">
       <div className=" flex items-center gap-1">
         <SearchHeaderButton
           style={`page__search-btn ${search === SearchSettings.WEB ? 'active' : ''}`}
