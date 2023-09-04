@@ -1,7 +1,8 @@
 {
   "parser": "@typescript-eslint/parser",
   "extends": [
-    "eslint:recommended", "next",
+    "eslint:recommended",
+    "next",
     "next/core-web-vitals",
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
@@ -21,11 +22,9 @@
       "jsx": true
     },
     "ecmaVersion": "latest",
-		"sourceType": "module"
+    "sourceType": "module"
   },
-  "plugins": [
-    "@typescript-eslint", "react", "prettier", "react-hooks"
-  ],
+  "plugins": ["@typescript-eslint", "react", "prettier", "react-hooks"],
   "rules": {
     "no-console": "warn",
     "prefer-const": "warn",
@@ -45,12 +44,13 @@
     "@typescript-eslint/no-explicit-any": "error",
     "@typescript-eslint/no-var-reqiures": "off",
     "react/jsx-uses-react": "off",
-    "react/react-in-jsx-scope": "off"
+    "react/react-in-jsx-scope": "off",
+    "@next/next/no-img-element": "off"
   },
-	"settings": {
-		"react": {
-			"pragma": "React",
-			"version": "detect"
-		}
-	}
+  "settings": {
+    "react": {
+      "pragma": "React",
+      "version": "detect"
+    }
+  }
 }

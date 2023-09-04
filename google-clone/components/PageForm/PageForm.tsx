@@ -45,8 +45,9 @@ const PageForm = () => {
         onClick={() => setInputValue('')}
       />
       <BsFillMicFill className="hidden sm:inline-flex pl-2 text-4xl text-blue-700 border-s hover:cursor-pointer hover:text-blue-400 transition-colors ease-linear duration-300" />
-
-      <BiSearchAlt2 className=" hidden items-center sm:inline-flex text-4xl pl-2 text-blue-700 hover:cursor-pointer hover:text-blue-400 transition-colors ease-linear duration-300 " />
+      <button>
+        <BiSearchAlt2 className=" hidden items-center sm:inline-flex text-4xl pl-2 text-blue-700 hover:cursor-pointer hover:text-blue-400 transition-colors ease-linear duration-300 " />
+      </button>
     </form>
   );
 };
