@@ -1,5 +1,5 @@
 import { ImageItemsType, ImageDataType } from '@/types';
-import { ResultCard } from './ResultCard/ResultCard';
+import { ResultImageCard } from './ResultCard/ResultImageCard';
 
 type ViewProps = {
   data: ImageDataType;
@@ -15,7 +15,7 @@ const ViewImageSearchResult = ({ data, items }: ViewProps) => {
       </p>
       <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-7">
         {items.map((item: ImageItemsType) => (
-          <ResultCard key={item.link} data={item} />
+          <ResultImageCard key={item.link} data={item} />
         ))}
       </div>
     </div>
