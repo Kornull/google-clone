@@ -1,5 +1,5 @@
 import { ImageItemsType, ImageDataType } from '@/types';
-import { ResultImageCard } from './ResultCard/ResultImageCard';
+import { ResultImageCard } from './ResultImageCard/ResultImageCard';
 
 type ViewProps = {
   data: ImageDataType;
