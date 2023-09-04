@@ -6,6 +6,7 @@ import { ChangeEvent, useState } from 'react';
 import { BiSearchAlt2 } from 'react-icons/bi';
 import { BsFillMicFill } from 'react-icons/bs';
 import { AiOutlineClose } from 'react-icons/ai';
+import { UserSettingsBtn } from '@/types';
 
 const PageForm = () => {
   const router = useRouter();
@@ -17,8 +18,15 @@ const PageForm = () => {
     ev: React.FormEvent<HTMLFormElement> | React.MouseEvent<HTMLElement>
   ): void => {
     ev.preventDefault();
+    let path = '';
+    const currentUrl: string = window.location.href;
+
+    if (currentUrl.includes(UserSettingsBtn.WEB)) path = UserSettingsBtn.WEB;
+    if (currentUrl.includes(UserSettingsBtn.IMAGE)) path = UserSettingsBtn.IMAGE;
+
     if (!inputValue.trim()) return;
-    router.push(`/search/web/${inputValue}?item=${inputValue}`);
+
+    router.push(`/search/${path}/${inputValue}?item=${inputValue}`);
   };
 
   return (

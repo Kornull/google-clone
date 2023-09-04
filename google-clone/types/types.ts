@@ -74,3 +74,8 @@ export type TextDataType = SearchDataType & {
 export type ImageDataType = SearchDataType & {
   items: ImageItemsType[];
 };
+
+export enum UserSettingsBtn {
+  WEB = 'web',
+  IMAGE = 'image',
+}
