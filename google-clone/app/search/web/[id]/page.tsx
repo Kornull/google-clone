@@ -1,4 +1,4 @@
-import ViewSearchResult from '@/components/UI/ViewSearchResult/ViewSearchResult';
+import ViewTextSearchResult from '@/components/UI/ViewTextSearchResult';
 import { DataItemsType, SearchDataType } from '@/types';
 
 type Props = {
@@ -22,7 +22,7 @@ const WebSearch = async ({ params: { id } }: Props) => {
 
   const items: DataItemsType[] = data.items;
 
-  return <div>{items && <ViewSearchResult data={data} items={items} />}</div>;
+  return <div>{items && <ViewTextSearchResult data={data} items={items} />}</div>;
 };
 
 export default WebSearch;
