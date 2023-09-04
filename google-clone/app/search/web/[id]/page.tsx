@@ -1,5 +1,5 @@
 import ViewTextSearchResult from '@/components/UI/ViewTextSearchResult';
-import { DataItemsType, SearchDataType } from '@/types';
+import { TextItemsType, TextDataType } from '@/types';
 
 type Props = {
   params: {
@@ -18,9 +18,9 @@ const WebSearch = async ({ params: { id } }: Props) => {
   const response = await fetch(
     `https://www.googleapis.com/customsearch/v1?key=${process.env.API_KEY}&cx=${process.env.CONTEXT_KEY}&q=${id}`
   );
-  const data: SearchDataType = await response.json();
+  const data: TextDataType = await response.json();
 
-  const items: DataItemsType[] = data.items;
+  const items: TextItemsType[] = data.items;
 
   return <div>{items && <ViewTextSearchResult data={data} items={items} />}</div>;
 };

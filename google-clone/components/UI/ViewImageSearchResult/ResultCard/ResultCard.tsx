@@ -1,10 +1,10 @@
 import Link from 'next/link';
 import Parser from 'html-react-parser';
 
-import { TextItemsType } from '@/types';
+import { DataItemsType } from '@/types';
 
 type CardProps = {
-  data: TextItemsType;
+  data: DataItemsType;
 };
 
 export const ResultCard = ({ data }: CardProps) => {

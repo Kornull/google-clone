@@ -1,9 +1,9 @@
-import { DataItemsType, SearchDataType } from '@/types';
+import { TextItemsType, SearchDataType } from '@/types';
 import { ResultCard } from './ResultCard/ResultCard';
 
 type ViewProps = {
   data: SearchDataType;
-  items: DataItemsType[];
+  items: TextItemsType[];
 };
 
 const ViewSearchResult = ({ data, items }: ViewProps) => {
@@ -13,7 +13,7 @@ const ViewSearchResult = ({ data, items }: ViewProps) => {
         Results: about {data.searchInformation.formattedTotalResults.split(',').join(' ')} &#40;
         {data.searchInformation.searchTime.toFixed(2)} sec.&#41;
       </p>
-      {items.map((item: DataItemsType) => (
+      {items.map((item: TextItemsType) => (
         <ResultCard key={item.cacheId} data={item} />
       ))}
     </div>
