@@ -32,16 +32,13 @@ const PageForm = () => {
         value={inputValue}
         onChange={(e: ChangeEvent<HTMLInputElement>) => setInputValue(e.target.value)}
       />
-      <button
+      <AiOutlineClose
+        className="text-4xl pr-1 sm:pr-2 text-gray-400 hover:cursor-pointer hover:text-gray-600 transition-colors ease-linear duration-300"
         onClick={() => setInputValue('')}
-        className="text-2xl pr-1 sm:pr-2 text-gray-400 hover:cursor-pointer hover:text-gray-600 transition-colors ease-linear duration-300"
-      >
-        <AiOutlineClose />
-      </button>
+      />
       <BsFillMicFill className="hidden sm:inline-flex pl-2 text-4xl text-blue-700 border-s hover:cursor-pointer hover:text-blue-400 transition-colors ease-linear duration-300" />
-      <button className=" hidden items-center sm:inline-flex text-2xl pl-2 text-blue-700 hover:cursor-pointer hover:text-blue-400 transition-colors ease-linear duration-300 ">
-        <BiSearchAlt2 />
-      </button>
+
+      <BiSearchAlt2 className=" hidden items-center sm:inline-flex text-4xl pl-2 text-blue-700 hover:cursor-pointer hover:text-blue-400 transition-colors ease-linear duration-300 " />
     </form>
   );
 };
