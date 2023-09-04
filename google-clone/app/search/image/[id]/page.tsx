@@ -1,3 +1,6 @@
+import ViewImageSearchResult from '@/components/UI/ViewImageSearchResult';
+import { ImageItemsType, ImageDataType } from '@/types';
+
 type Props = {
   params: {
     id: string;
@@ -6,13 +9,19 @@ type Props = {
 
 export function generateMetadata({ params: { id } }: Props) {
   return {
-    title: `${id} - Google Clone search`,
-    description: 'Word search Google Clone',
+    title: `${decodeURI(id)} - Google Clone search`,
+    description: `Google-Clone search image result - ${decodeURI(id)}`,
   };
 }
 
-const WebSearch = () => {
-  return <div>WebSearch</div>;
+const ImageSearch = async ({ params: { id } }: Props) => {
+  const response = await fetch(
+    `https://www.googleapis.com/customsearch/v1?key=${process.env.API_KEY}&cx=${process.env.CONTEXT_KEY}&q=${id}&searchType=image`
+  );
+  const data: ImageDataType = await response.json();
+  const items: ImageItemsType[] = data.items;
+
+  return <div>{items && <ViewImageSearchResult data={data} items={items} />}</div>;
 };
 
-export default WebSearch;
+export default ImageSearch;
