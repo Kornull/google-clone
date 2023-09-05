@@ -1,24 +1,22 @@
 import NotResult from '@/components/UI/NotResult';
 import ViewImageSearchResult from '@/components/UI/ViewImageSearchResult';
 
-import { ImageItemsType, ImageDataType } from '@/types';
+import { ImageItemsType, ImageDataType, PageProps } from '@/types';
 
-type Props = {
-  params: {
-    id: string;
-  };
-};
-
-export function generateMetadata({ params: { id } }: Props) {
+export function generateMetadata(props: PageProps) {
   return {
-    title: `${decodeURI(id)} - Google Clone search`,
-    description: `Google-Clone search image result - ${decodeURI(id)}`,
+    title: `${decodeURI(props.params.id)} - Google Clone search`,
+    description: `Google-Clone search image result - ${decodeURI(props.params.id)}`,
   };
 }
 
-const ImageSearch = async ({ params: { id } }: Props) => {
+const ImageSearch = async (props: PageProps) => {
+  const id = props.params.id;
+  const searchParams = props.searchParams;
+  const startIndex = searchParams.start !== undefined ? searchParams.start : '1';
+
   const response = await fetch(
-    `https://www.googleapis.com/customsearch/v1?key=${process.env.API_KEY}&cx=${process.env.CONTEXT_KEY}&q=${id}&searchType=image`
+    `https://www.googleapis.com/customsearch/v1?key=${process.env.API_KEY}&cx=${process.env.CONTEXT_KEY}&q=${id}&searchType=image&start=${startIndex}`
   );
 
   if (!response.ok) {
@@ -30,7 +28,7 @@ const ImageSearch = async ({ params: { id } }: Props) => {
 
   if (!items) return <NotResult />;
 
-  return <div>{items && <ViewImageSearchResult data={data} items={items} />}</div>;
+  return <>{items && <ViewImageSearchResult data={data} items={items} />}</>;
 };
 
 export default ImageSearch;

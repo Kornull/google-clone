@@ -1,24 +1,22 @@
 import NotResult from '@/components/UI/NotResult/NotResult';
 import ViewTextSearchResult from '@/components/UI/ViewTextSearchResult';
 
-import { TextItemsType, TextDataType } from '@/types';
+import { TextItemsType, TextDataType, PageProps } from '@/types';
 
-type Props = {
-  params: {
-    id: string;
-  };
-};
-
-export function generateMetadata({ params: { id } }: Props) {
+export function generateMetadata(props: PageProps) {
   return {
-    title: `${decodeURI(id)} - Google Clone search`,
-    description: `Google-Clone search result - ${decodeURI(id)}`,
+    title: `${decodeURI(props.params.id)} - Google Clone search`,
+    description: `Google-Clone search result - ${decodeURI(props.params.id)}`,
   };
 }
 
-const WebSearch = async ({ params: { id } }: Props) => {
+const WebSearch = async (props: PageProps) => {
+  const id = props.params.id;
+  const searchParams = props.searchParams;
+  const startIndex = searchParams.start !== undefined ? searchParams.start : '1';
+
   const response = await fetch(
-    `https://www.googleapis.com/customsearch/v1?key=${process.env.API_KEY}&cx=${process.env.CONTEXT_KEY}&q=${id}`
+    `https://www.googleapis.com/customsearch/v1?key=${process.env.API_KEY}&cx=${process.env.CONTEXT_KEY}&q=${id}&start=${startIndex}`
   );
 
   if (!response.ok) {
@@ -26,6 +24,7 @@ const WebSearch = async ({ params: { id } }: Props) => {
   }
 
   const data: TextDataType = await response.json();
+  console.log('datadatadatadatadatadatadatadatadatadatadatadata', data);
   const items: TextItemsType[] = data.items;
 
   if (!items) return <NotResult />;
