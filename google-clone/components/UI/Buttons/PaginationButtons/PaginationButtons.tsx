@@ -14,7 +14,7 @@ const PaginationButtons = () => {
   const startIndexPage = Number(searchParams.get('start')) | 1;
 
   return (
-    <div className="flex items-center justify-center sm:justify-start m-auto w-full max-w-xl mt-8">
+    <div className="flex items-center justify-center sm:justify-start m-auto mt-8 md:m-0 md:mt-9 md:pl-56  w-full max-w-xl">
       <div className="flex space-x-4 items-baseline">
         {startIndexPage > 10 && (
           <Link
