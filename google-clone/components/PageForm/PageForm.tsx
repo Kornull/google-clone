@@ -10,8 +10,8 @@ import { UserSettingsBtn } from '@/types';
 
 const PageForm = () => {
   const router = useRouter();
-  const params: ReadonlyURLSearchParams = useSearchParams();
-  const search: string | null = params.get('item');
+  const searchParams: ReadonlyURLSearchParams = useSearchParams();
+  const search: string | null = searchParams.get('item');
   const [inputValue, setInputValue] = useState<string>(search || '');
 
   const handleSubmit = (

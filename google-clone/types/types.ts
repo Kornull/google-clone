@@ -79,3 +79,10 @@ export enum UserSettingsBtn {
   WEB = 'web',
   IMAGE = 'image',
 }
+
+export type PageProps = {
+  params: {
+    id: string;
+  };
+  searchParams: { [key: string]: string | string[] | undefined };
+};
