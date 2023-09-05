@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 
 const Error = ({ error, reset }: { error: Error; reset: () => void }) => {
   useEffect(() => {
-    console.log('Error', error);
+    console.log(error);
   }, [error]);
   return (
     <div className=" flex flex-col justify-center items-center pt-52">
