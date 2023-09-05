@@ -30,7 +30,7 @@ const WebSearch = async ({ params: { id } }: Props) => {
 
   if (!items) return <NotResult />;
 
-  return <div>{items && <ViewTextSearchResult data={data} items={items} />}</div>;
+  return <>{items && <ViewTextSearchResult data={data} items={items} />}</>;
 };
 
 export default WebSearch;

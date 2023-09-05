@@ -8,7 +8,7 @@ type ViewProps = {
 
 const ViewSearchResult = ({ data, items }: ViewProps) => {
   return (
-    <div className="w-full px-2 pt-52 sm:px-5 md:pl-44 md:pt-[168px]">
+    <div className="w-full md:pl-44">
       <p className=" text-gray-500 text-sm pb-3">
         Results: about {data.searchInformation.formattedTotalResults.split(',').join(' ')} &#40;
         {data.searchInformation.searchTime.toFixed(2)} sec.&#41;
