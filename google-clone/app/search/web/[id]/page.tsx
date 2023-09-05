@@ -24,7 +24,6 @@ const WebSearch = async (props: PageProps) => {
   }
 
   const data: TextDataType = await response.json();
-  console.log('datadatadatadatadatadatadatadatadatadatadatadata', data);
   const items: TextItemsType[] = data.items;
 
   if (!items) return <NotResult />;
