@@ -31,7 +31,7 @@
  * #### *routing*
  * #### *loading*
  * #### *not result*
- * #### *error page*
+ * #### *error*
  * #### *website viewer with 320 pixels resolution (mobile version)*
  ---
  
