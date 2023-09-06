@@ -1,5 +1,5 @@
 # google-clone
-# CV
+
 ## Screen: 
 ![clone](https://github.com/Kornull/google-clone/assets/96052707/5de3df3a-a93e-45e5-a588-633d77d437af)
 
