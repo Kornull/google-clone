@@ -15,24 +15,24 @@
 * ### *REST API*,
 * ### *Tailwind css*,
 * ### *EsLint*,
-* ### *Google Developers API*, [link](https://developers.google.com/)
-* ### *eXTReMe-IP-LOOKUP API*, [link](https://extreme-ip-lookup.com/)
-* ### *Random word API*, [link](https://random-word-api.herokuapp.com/home)
+* ### *Google Developers API*, *[link](https://developers.google.com/)*
+* ### *eXTReMe-IP-LOOKUP API*, *[link](https://extreme-ip-lookup.com/)*
+* ### *Random word API*, *[link](https://random-word-api.herokuapp.com/home)*
 
 ## Details:
- * #### *main search form*
- * #### *page search form*
- * #### *search result home page*
- * #### *image search result page*
+ * #### *main search form on the main page*
+ * #### *header with the search form on the search result page*
+ * #### *main search results page*
+ * #### *image search results page*
  * #### *pagination*
- * #### *update metadata*
+ * #### *metadata update*
  * #### *api calls*
- * #### *drawing cards*
+ * #### *card component with search result data (text / links / images )*
  * #### *routing*
- * #### *loading*
- * #### *not result*
- * #### *error*
- * #### *website viewer with 320 pixels resolution (mobile version)*
+ * #### *loading component*
+ * #### *no result component*
+ * #### *error component*
+ * #### *viewing the site with 320 pixels resolution (mobile version)*
  ---
  
  ## Follow this [link](https://kornull-google-clone.vercel.app/)
